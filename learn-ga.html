@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Learn NEAT - Genetic Algorithms </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+        <script language="javascript" type="text/javascript" src="./ga_demo/libraries/p5.min.js"></script>
+        <script language="javascript" type="text/javascript" src="./ga_demo/brain.js"></script>
+        <script language="javascript" type="text/javascript" src="./ga_demo/dot.js"></script>
+        <script language="javascript" type="text/javascript" src="./ga_demo/obstacle.js"></script>
+        <script language="javascript" type="text/javascript" src="./ga_demo/population.js"></script>
+        <script language="javascript" type="text/javascript" src="./ga_demo/ga_demo.js"></script>
+        <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+            <a class="navbar-brand" href="./home.html">Learn NEAT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active"><a class="nav-link" href="./learn-ga.html">Genetic Algorithms</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./learn-nn.html">Neural Networks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="what-is-neat.html">What is NEAT?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./game.html">Interactive Game</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1><br></h1>
+
+        <main role="main">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">Genetic Algorithms</h1>
+                    <p>Computers simulate natural selection to master a repeating task, without variation in the surroundings. The process takes 3 main steps to operate.</p>
+                    <p><a class="btn btn-primary btn-lg" href="#demo" role="button">See Demo »</a></p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Evaluating Fitness</h2>
+                        <p> In order for the algorithm to work, the algorithm must know which of the creatures did the best.<br><br>For different programs, the scoring method varies.<br><br>In this example, the dots are graded with the following function: </p>
+                        <pre><code>calculateFitness() {<br>  if (this.reachedGoal) {<br>    this.fitness = <br>    (1/16 + 100000/pow(this.brain.index, 2));<br>  } else {<br>    let distanceToGoal = dist(this.pos,goal);<br>    this.fitness = 1/pow(distanceToGoal, 2);<br>  }<br>}</code></pre>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Selecting Parents</h2>
+                        <p> After evaluating each bot's fitness, the program then needs to choose which parent the new dot will represent.<br><br>Multiple bots can have one parent, and the chances are determined by the sum of all the bot's fitnesses, as seen below. </p>
+                        <pre><code>selectParent() {<br>  let rand = random(this.fitnessSum);<br>  let runningSum = 0;<br>  for (let i = 0; i&lt;this.dots.length; i++) {<br>    runningSum+= this.dots[i].fitness;<br>    if (runningSum > rand) {<br>      return this.dots[i];<br>      }<br>    }<br>  return null;<br>}</code></pre>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Random Evolution</h2>
+                        <p>After all the new bots have replaced the old bots, the algorithm must mutate the remaining bots.<br><br>It uses a for loop to call the function on each of the bots.<br><br>In this demonstration, if a random number is less than 0.025, than one of the directions is changed to a random direction. </p>
+                        <pre><code>mutate() {<br>  for (let i = 0; i&lt;this.dirs.length; i++) {<br>    if (random(1)<0.025) {<br>      this.dirs[i] = <br>      p5.Vector.fromAngle(random(TWO_PI));<br>    }<br>  }<br>}
+
+                        </code></pre>
+                    </div>
+                </div>
+                <hr>
+                <div id="demo" class="col-md-1"></div>
+            </div>
+
+        </main>
+    </body>
+</html>

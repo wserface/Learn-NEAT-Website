@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> Learn NEAT - Neural Networks </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script language="javascript" type="text/javascript" src="./nn_demo/libraries/p5.min.js"></script>
+        <script language="javascript" type="text/javascript" src="./nn_demo/network.js"></script>
+        <script language="javascript" type="text/javascript" src="./nn_demo/node.js"></script>
+        <script language="javascript" type="text/javascript" src="./nn_demo/nn_demo.js"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a class="navbar-brand" href="./home.html">Learn NEAT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="./learn-ga.html">Genetic Algorithms</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="./learn-nn.html">Neural Networks</a></li>
+                    <li class="nav-item"><a class="nav-link" href="what-is-neat.html">What is NEAT?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./game.html">Interactive Game</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <main role="main">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">Neural Networks</h1>
+                    <p>Computers use multilayer networks to simulate a brain. Each "Node" has a list of outputs, which is matched with a list of weights. These work together to output a number to the next list of Nodes.</p>
+                    <p><a class="btn btn-primary btn-lg" href="#demo" role="button">See Demo »</a></p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2> Taking Inputs </h2>
+                        <p> When a Node takes an input, it adds it to the sum it is already tracking. The function below allows other Nodes to give the specific Node an input.<br><br>It is a very simple function.</p>
+                        <pre><code>input(i) {<br>  this.sum += i;<br>}</code></pre>
+                    </div>
+                    <div class="col-md-4">
+                        <h2> The Sigmoid </h2>
+                        <p> The Sigmoid function is vital to Neural Networks. It allows the nodes to have values much larger that 1, yet only output a maximum of 1. The function is usually defined as 1/(1+2^(-x)). <br><br>However, in this project, the function has been modified to return a value between -1 and 1. </p>
+                        <pre><code>function sigmoid(n) {<br>  return 2*(1/(1+pow(5, 0-n)))-1;<br>}</code></pre>
+                    </div>
+                    <div class="col-md-4">
+                        <h2> Giving Outputs </h2>
+                        <p> When a Node has received all of it's inputs, it then outputs to the Nodes it is connected to. <br><br>Like the input function, it is relatively simple. </p>
+                        <pre><code>output() {<br>  let out = sigmoid(this.sum);<br>  for (let i = 0; i&lt;this.outs.length; i++) {<br>    this.outs[i].input(out*this.weights[i]);<br>  }<br>}</code></pre>
+                    </div>
+                </div>
+                <hr>
+                <div id="demo" class="col-md-1"></div>
+            </div>
+        </main>
+    </body>
+</html>

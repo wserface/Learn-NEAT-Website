@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Learn NEAT - Home </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="carousel.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+      <a class="navbar-brand" href="./home.html">Learn NEAT</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="./learn-ga.html">Genetic Algorithms</a></li>
+          <li class="nav-item"><a class="nav-link" href="./learn-nn.html">Neural Networks</a></li>
+          <li class="nav-item"><a class="nav-link" href="what-is-neat.html">What is NEAT?</a></li>
+          <li class="nav-item"><a class="nav-link" href="./game.html">Interactive Game</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+          <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="3" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption text-left">
+                <h1> NEAT is <em>neat</em>! </h1>
+                <p> Combine Neural Networks with Genetic Algorithms to have a computer learn! </p>
+                <p><a class="btn btn-lg btn-primary" href="./what-is-neat.html" role="button"> Learn More! </a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bg-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1> Play and Learn </h1>
+                <p> Play an interactive game that allows you to see NEAT in action!</p>
+                <p><a class="btn btn-lg btn-primary" href="./game.html" role="button"> Play Game! </a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption">
+                <h1> Genetic Algorithms! </h1>
+                <p> Genetic Algorithms simulate computer learning by simulation the process of Natural Selection with lots of simple bots. </p>
+                <p><a class="btn btn-lg btn-primary" href="./learn-ga.html" role="button"> See Demonstration! </a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"></rect></svg>
+            <div class="container">
+              <div class="carousel-caption text-right">
+                <h1> Neural Networks </h1>
+                <p> Neural Networks are a way to simulate a brain, either a tiny model with 10 Nodes to play a game,<br>or a massive network with 10 Million Nodes to analyze and process images. </p>
+                <p><a class="btn btn-lg btn-primary" href="./learn-nn.html" role="button"> Learn More! </a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+      <div class="container marketing">
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading"> Genetic Algorithms: <br><span class="text-muted"> Computers meet Darwinism </span></h2>
+            <p class="lead"><br> <a href="./learn-ga.html">See how Computers simulating natural selection and evolution can complete simple, reliable tasks.</a> </p>
+          </div>
+          <div class="col-md-5">
+            <a href="./learn-ga.html"><img src="./resources/ga-picture.png" width="450px" alt="Image of a Genetic Algorithm"></a>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">Neural Networks:<br><span class="text-muted">Simulating your brain.</span></h2>
+            <p class="lead"><br> <a href="./learn-nn.html">Visualize how computers use inputs, nodes, and networks to "think".</a> </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <a href="./learn-nn.html"><img src="./resources/nn-picture.png" width="450px" alt="Image of a Neural Network"></a>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
+          <div class="col-md-7" style="margin-bottom: 50px !important;">
+            <h2 class="featurette-heading"> <strong>N</strong>euro-<br><strong>E</strong>volution of <br><strong>A</strong>ugmented <br><strong>T</strong>opologies: <br><span class="text-muted"> It’s pretty <em>NEAT</em>. </span></h2>
+            <p class="lead"><br> <a href="./what-is-neat.html">Learn more about how Genetic Algorithms combined with <br>Neural Networks can help computers learn simple tasks!</a> </p>
+          </div>
+          <div class="col-md-5">
+            <a href="./what-is-neat.html"><img src="./resources/neat.png" width="450px" alt="NEAT Program"></a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <hr>
+    <footer class="container">
+      <p>© 2019 / Serface Networks. <a href="">View Site Code</a> </p>
+    </footer>
+  </body>
+</html>
