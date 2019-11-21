@@ -3,8 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="50212900-b48a-492b-8cb5-9978a7807666" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ga_demo/brain.js" beforeDir="false" afterPath="$PROJECT_DIR$/ga_demo/brain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn-ga.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn-ga.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn-nn.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn-nn.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-is-neat.html" beforeDir="false" afterPath="$PROJECT_DIR$/what-is-neat.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +33,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/cmd/git.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
@@ -77,7 +82,8 @@
       <workItem from="1574178879632" duration="4920000" />
       <workItem from="1574265809214" duration="6416000" />
       <workItem from="1574295425875" duration="928000" />
-      <workItem from="1574353557735" duration="1809000" />
+      <workItem from="1574353557735" duration="4443000" />
+      <workItem from="1574368153375" duration="487000" />
     </task>
     <servers />
   </component>

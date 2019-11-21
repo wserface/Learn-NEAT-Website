@@ -19,7 +19,7 @@ class Brain {
 
   mutate() {
     for (let i = 0; i<this.dirs.length; i++) {
-      if (random(1)<0.025) {
+      if (random(1)<(1/pop.gen)) {
         this.dirs[i] = p5.Vector.fromAngle(random(TWO_PI));
       }
     }

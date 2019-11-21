@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark">
+        <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark" style="padding: 20px;">
             <a class="navbar-brand" href="./home.html">Learn NEAT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -61,8 +61,8 @@
                     </div>
                     <div class="col-md-4">
                         <h2>Random Evolution</h2>
-                        <p>After all the new bots have replaced the old bots, the algorithm must mutate the remaining bots.<br><br>It uses a for loop to call the function on each of the bots.<br><br>In this demonstration, if a random number is less than 0.025, than one of the directions is changed to a random direction. </p>
-                        <pre><code>mutate() {<br>  for (let i = 0; i&lt;this.dirs.length; i++) {<br>    if (random(1)<0.025) {<br>      this.dirs[i] = <br>      p5.Vector.fromAngle(random(TWO_PI));<br>    }<br>  }<br>}
+                        <p>After all the new bots have replaced the old bots, the algorithm must mutate the remaining bots.<br><br>It uses a for loop to call the function on each of the bots.<br><br>In this demonstration, if a random number is less than the current generation number to the -1st power, than one of the directions is changed to a random direction. Because of this, the dots mutate rapidly in the start, and mutate less as the simulation progresses.</p>
+                        <pre><code>mutate() {<br>  for (let i = 0; i&lt;this.dirs.length; i++) {<br>    if (random(1)<(1/pop.gen))) {<br>      this.dirs[i] = <br>      p5.Vector.fromAngle(random(TWO_PI));<br>    }<br>  }<br>}
 
                         </code></pre>
                     </div>
