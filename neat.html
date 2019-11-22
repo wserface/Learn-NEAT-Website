@@ -11,7 +11,7 @@
     </head>
 
     <body>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark" style="padding: 20px">
+        <nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark" style="padding: 20px">
             <a class="navbar-brand" href="./home.html">Learn NEAT</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
@@ -21,17 +21,48 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="./learn-ga.html">Genetic Algorithms</a></li>
                     <li class="nav-item"><a class="nav-link" href="./learn-nn.html">Neural Networks</a></li>
-                    <li class="nav-item active"><a class="nav-link" href="neat.html">What is NEAT?</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./game.html">Interactive Game</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Site Code</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="neat.html">N.E.A.T.</a></li>
                 </ul>
+                <br>
             </div>
             <div class="navbar-nav navbar-right badge badge-pill badge-secondary"><li class="nav-item"><a class="nav-link text-light" href="./index.html">View Site Code</a></li></div>
         </nav>
 
-        <div class="container-fluid">
+        <br><br><br>
 
-        </div>
+        <main role="main">
+            <div class="jumbotron">
+                <div class="container">
+                    <h1 class="display-3">Genetic Algorithms</h1>
+                    <p>Computers simulate natural selection to master a repeating task, without variation in the surroundings. The process takes 3 main steps to operate.</p>
+                    <p><a class="btn btn-primary btn-lg" href="#demo" role="button">See Demo »</a></p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h2>Evaluating Fitness</h2>
+                        <p> In order for the algorithm to work, the algorithm must know which of the creatures did the best.<br><br>For different programs, the scoring method varies.<br><br>In this example, the dots are graded with the following function: </p>
+                        <pre><code>calculateFitness() {<br>  if (this.reachedGoal) {<br>    this.fitness = <br>    (1/16 + 100000/pow(this.brain.index, 2));<br>  } else {<br>    let distanceToGoal = dist(this.pos,goal);<br>    this.fitness = 1/pow(distanceToGoal, 2);<br>  }<br>}</code></pre>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Selecting Parents</h2>
+                        <p> After evaluating each bot's fitness, the program then needs to choose which parent the new dot will represent.<br><br>Multiple bots can have one parent, and the chances are determined by the sum of all the bot's fitnesses, as seen below. </p>
+                        <pre><code>selectParent() {<br>  let rand = random(this.fitnessSum);<br>  let runningSum = 0;<br>  for (let i = 0; i&lt;this.dots.length; i++) {<br>    runningSum+= this.dots[i].fitness;<br>    if (runningSum > rand) {<br>      return this.dots[i];<br>      }<br>    }<br>  return null;<br>}</code></pre>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Random Evolution</h2>
+                        <p>After all the new bots have replaced the old bots, the algorithm must mutate the remaining bots.<br><br>It uses a for loop to call the function on each of the bots.<br><br>In this demonstration, if a random number is less than the current generation number to the -1st power, than one of the directions is changed to a random direction. Because of this, the dots mutate rapidly in the start, and mutate less as the simulation progresses.</p>
+                        <pre><code>mutate() {<br>  for (let i = 0; i&lt;this.dirs.length; i++) {<br>    if (random(1)<(1/pop.gen))) {<br>      this.dirs[i] = <br>      p5.Vector.fromAngle(random(TWO_PI));<br>    }<br>  }<br>}
+
+                        </code></pre>
+                    </div>
+                </div>
+                <hr>
+                <div id="demo" class="col-md-1"></div>
+            </div>
+
+        </main>
 
         <hr>
         <footer class="container">
