@@ -3,12 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="50212900-b48a-492b-8cb5-9978a7807666" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game.html" beforeDir="false" afterPath="$PROJECT_DIR$/game.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learn-ga.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn-ga.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/learn-nn.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn-nn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/what-is-neat.html" beforeDir="false" afterPath="$PROJECT_DIR$/what-is-neat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/what-is-neat.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../Coding/Projects/Kuuro-Bootstrap" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RunDashboard">
@@ -82,7 +82,8 @@
       <workItem from="1574265809214" duration="6416000" />
       <workItem from="1574295425875" duration="928000" />
       <workItem from="1574353557735" duration="4443000" />
-      <workItem from="1574368153375" duration="1097000" />
+      <workItem from="1574368153375" duration="1297000" />
+      <workItem from="1574453957856" duration="179000" />
     </task>
     <servers />
   </component>
