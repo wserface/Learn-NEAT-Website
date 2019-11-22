@@ -95,11 +95,13 @@ class Population {
       }
     }
     this.bestDot = maxIndex;
+    let out = "";
     if (this.dots[this.bestDot].reachedGoal) {
       this.minSteps = this.dots[this.bestDot].brain.index;
-      console.log("Gen "+this.gen+"'s Best Score: "+max+", Steps: "+this.dots[maxIndex].brain.index);
+      out = ("Gen "+this.gen+":\nBest Score: "+max+", Steps: "+this.dots[maxIndex].brain.index);
     } else {
-      console.log("Gen "+this.gen+"'s Best Score: "+max+", Distance from Goal: "+round(dist(this.dots[maxIndex].pos.x, this.dots[maxIndex].pos.y, goal.x, goal.y)));
+      out = ("Gen "+this.gen+":\nBest Score: "+max+", Distance from Goal: "+round(dist(this.dots[maxIndex].pos.x, this.dots[maxIndex].pos.y, goal.x, goal.y)));
     }
+    document.getElementById("console").innerText = out;
   }
 }
