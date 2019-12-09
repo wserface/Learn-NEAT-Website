@@ -3,8 +3,7 @@ function setup() {
   can.parent("#demo");
   frameRate(30);
   background(200);
-  console.log("Welcome to a demonstration on Genetic Algorithms.\n\nSee https://www.github.com/code-bullet, who inspired this project.\n\nClick the frame to start the program.");
-  text("Genetic Algorithm Demonstration based on Code Bullet (github/code-bullet)'s \"Smart Dots Genetic Algorithm Tutorial\"\n\n                                            Data Summary in Console (Ctrl/Cmd Shift I). Click to start.", width/2-300, height/2);
+  text("Genetic Algorithm Demonstration based on Code Bullet (github.com/code-bullet)'s \"Smart Dots Genetic Algorithm Tutorial\"\n\n                                                            Data Summary in Console. Click to start.", width/2-300, height/2);
   this.on = false;
 }
 

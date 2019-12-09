@@ -1,34 +1,26 @@
 function setup() {
-  createCanvas(960, 540);
+  let can = createCanvas(960, 540);
+  can.parent("#demo");
   frameRate(30);
+  background(200);
+  text("NEAT Demonstration\n\n       Click to Start", width/2-75, height/2);
   this.on = false;
-  this.player = new Bot();
+  this.game = new GameRunner(150);
 }
-
 
 function draw() {
   if (this.on) {
     this.game.update();
     this.game.show();
-  } else {
-    background(200);
-    text("NEAT Game\n\nClick to Start.", width/2-50, height/2-5);
-    this.player.update();
-    this.player.show();
   }
 }
 
 function mouseReleased() {
-  this.on = true;
-  this.game = new GameRunner();
-}
-
-function keyReleased() {
-  if (key === ' ') {
-    this.player.jump();
+  if (!this.on) {
+    this.on = true;
   }
 }
 
 function sigmoid(n) {
-  return 2*(1/(1+pow(5, 0-n)))-1;
+  return 1/(1+pow(3, 0-n));
 }
