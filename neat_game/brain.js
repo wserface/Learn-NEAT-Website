@@ -64,6 +64,9 @@ class Network {
       this.outputs[o].sum = 0;
     }
   }
+
+  clone() {
+  }
 }
 
 class Node {
@@ -117,5 +120,8 @@ class Node {
       fill(0);
       text(""+round(this.sum*1000)/1000, this.pos.x-15, this.pos.y+5);
     }
+  }
+
+  clone() {
   }
 }

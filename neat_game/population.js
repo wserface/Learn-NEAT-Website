@@ -10,9 +10,9 @@ class Population {
     }
   }
 
-  update(nextObs) {
+  update(cHeight, nHeight) {
     for (let i = 0; i<this.bots.length; i++) {
-      this.bots[i].update(nextObs  );
+      this.bots[i].update(cHeight, nHeight);
     }
     this.currentStep++;
   }
