@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="50212900-b48a-492b-8cb5-9978a7807666" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn-ga.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn-ga.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/learn-nn.html" beforeDir="false" afterPath="$PROJECT_DIR$/learn-nn.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neat.html" beforeDir="false" afterPath="$PROJECT_DIR$/neat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neat_game/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neat_game/brain.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/brain.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neat_game/gamerunner.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/gamerunner.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +91,7 @@
       <workItem from="1575564151826" duration="40000" />
       <workItem from="1575646872916" duration="598000" />
       <workItem from="1575909044880" duration="2430000" />
-      <workItem from="1575992390668" duration="2091000" />
+      <workItem from="1575992390668" duration="3162000" />
     </task>
     <servers />
   </component>

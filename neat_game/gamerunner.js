@@ -3,24 +3,23 @@ class GameRunner {
     this.pop = new Population();
     this.step = 0;
     this.chunks = [];
+  }
+
+  load() {
     for (let i = 0; i<10; i++) {
-      addChunk();
+      this.chunks.push(round(random(5)));
     }
   }
 
   update() {
     if (this.step%100 === 0) {
-      addChunk();
+      this.chunks.push(round(random(5)));
     }
-    this.pop.update(chunks[chunks.length-9, chunks[chunks.length-8]]);
-    step++;
+    this.pop.update(this.chunks[this.chunks.length-9], this.chunks[this.chunks.length-8]);
+    this.step++;
   }
 
   show() {
     this.pop.show();
-  }
-
-  addChunk() {
-    this.chunks.push(round(random(5)));
   }
 }

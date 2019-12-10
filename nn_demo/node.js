@@ -3,7 +3,7 @@ class Node {
   constructor(p, o, w) {
     this.pos = p;
     this.sum = 0;
-    if (o.length != w.length) {
+    if (o.length !== w.length) {
       throw new Error("Make sure the output list has the same length as the weight list.");
     }
     this.outputs = o;
