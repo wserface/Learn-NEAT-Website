@@ -5,11 +5,11 @@ function setup() {
   background(200);
   text("NEAT Demonstration\n\n       Click to Start", width/2-75, height/2);
   this.on = false;
-  this.game = new GameRunner(150);
 }
 
 function draw() {
   if (this.on) {
+    background(200);
     this.game.update();
     this.game.show();
   }
@@ -18,6 +18,9 @@ function draw() {
 function mouseReleased() {
   if (!this.on) {
     this.on = true;
+    this.game = new GameRunner(150);
+  } else {
+    this.game.pop.bots[0].jump();
   }
 }
 

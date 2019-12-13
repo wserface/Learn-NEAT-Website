@@ -6,7 +6,7 @@ class Population {
     this.minSteps = 1000;
     this.currentStep = 0;
     for (let i = 0; i<size; i++) {
-      this.bots[i].push(new Bot());
+      this.bots[i] = new Bot();
     }
   }
 
