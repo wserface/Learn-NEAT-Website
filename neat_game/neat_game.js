@@ -19,6 +19,7 @@ function mouseReleased() {
   if (!this.on) {
     this.on = true;
     this.game = new GameRunner(150);
+    this.game.load();
   } else {
     this.game.pop.bots[0].jump();
   }

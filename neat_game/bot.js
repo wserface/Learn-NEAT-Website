@@ -24,7 +24,7 @@ class Bot {
 
   show () {
     fill(0);
-    rect(150, height-150-this.hgt, 10, 10);
+    rect(250, height-160-this.hgt, 10, 10);
   }
 
   mutate() {
