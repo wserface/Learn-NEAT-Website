@@ -39,7 +39,6 @@ class Population {
     this.setBestBot();
     this.calculateFitnessSum();
     newbots[0] = this.bots[this.bestBot].clone();
-    consoleLog(this.bestBot);
     newbots[0].isBest = true;
     for (let i = 1; i< this.bots.length; i++) {
       let parent = this.selectParent();

@@ -12,6 +12,7 @@ class GameRunner {
   update() {
     if (this.pop.allBotsDead()) {
       this.pop.nextGen();
+      this.reset();
     } else {
       if (this.step%250 === 0) {
         this.chunks.push(this.chunks[this.chunks.length-1]+(round(random(4)-2)));
@@ -33,5 +34,12 @@ class GameRunner {
       rect(width+((i*250)-this.step), height-100-(25*this.chunks[i]), 250, height);
     }
     this.pop.show();
+  }
+
+  reset() {
+    this.chunks = [];
+    for (let i = 1; i<10; i++) {
+      this.chunks.push(this.chunks[this.chunks.length-1]+(round(random(4)-2)));
+    }
   }
 }

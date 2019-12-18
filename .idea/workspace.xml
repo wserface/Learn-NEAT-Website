@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="50212900-b48a-492b-8cb5-9978a7807666" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neat_game/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/bot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neat_game/brain.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/brain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neat_game/gamerunner.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/gamerunner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neat_game/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neat_game/neat_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/neat_game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neat_game/population.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/population.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +95,8 @@
       <workItem from="1576252958583" duration="1913000" />
       <workItem from="1576513898239" duration="97000" />
       <workItem from="1576605497389" duration="1729000" />
-      <workItem from="1576694817211" duration="4030000" />
+      <workItem from="1576694817211" duration="4077000" />
+      <workItem from="1576701579044" duration="242000" />
     </task>
     <servers />
   </component>
@@ -124,14 +121,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="548" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1576513954093" />
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576171740087">
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576701718332">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576171740087" />
+    <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576701718332" />
     <state x="463" y="149" width="609" height="526" key="find.popup" timestamp="1576696777336">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="463" y="149" width="609" height="526" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1576696777336" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1576701851526">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1576701851526" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1575909890170">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
