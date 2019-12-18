@@ -5,7 +5,6 @@ class Network {
     this.calcs = [];
     this.inputs = [];
 
-    //Sets data for each node of each list
     for (let i = 0; i<ous; i++) {
       this.outputs.push(new Node(createVector(3*(width/4), (i+1)*(height/(ous+1))), [], []));
     }
@@ -49,6 +48,13 @@ class Network {
     }
     for (let o = 0; o<this.outputs.length; o++) {
       this.outputs[o].sum = 0;
+    }
+  }
+
+  mutate() {
+    for (let i = 0; i<this.inputs.length; i++) {
+    }
+    for (let i = 0; i<this.calcs.length; i++) {
     }
   }
 

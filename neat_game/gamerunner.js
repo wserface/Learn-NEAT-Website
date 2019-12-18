@@ -1,6 +1,6 @@
 class GameRunner {
   constructor(size) {
-    this.pop = new Population(150);
+    this.pop = new Population(size);
     this.step = 0;
     this.chunks = [];
     this.chunks[0] = 2;
@@ -10,11 +10,15 @@ class GameRunner {
   }
 
   update() {
-    if (this.step%250 === 0) {
-      this.chunks.push(this.chunks[this.chunks.length-1]+(round(random(4)-2)));
+    if (this.pop.allBotsDead()) {
+      this.pop.nextGen();
+    } else {
+      if (this.step%250 === 0) {
+        this.chunks.push(this.chunks[this.chunks.length-1]+(round(random(4)-2)));
+      }
+      this.pop.update(this.chunks[this.chunks.length-14], this.step%250, this.chunks[this.chunks.length-13], this.step);
+      this.step += 5;
     }
-    this.pop.update(this.chunks[this.chunks.length-14], this.chunks[this.chunks.length-13]);
-    this.step += 5;
   }
 
   show() {

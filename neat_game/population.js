@@ -3,15 +3,15 @@ class Population {
     this.bots = [];
     this.fitnessSum = 0;
     this.gen = 1;
-    this.minSteps = 1000;
+    this.bestBot = 0;
     for (let i = 0; i<size; i++) {
       this.bots[i] = new Bot();
     }
   }
 
-  update(cHeight, nDist, nHeight) {
+  update(cHeight, nDist, nHeight, score) {
     for (let i = 0; i<this.bots.length; i++) {
-      this.bots[i].update(cHeight, nDist, nHeight);
+      this.bots[i].update(cHeight, nDist, nHeight, score);
     }
   }
 
@@ -22,7 +22,7 @@ class Population {
     this.bots[0].show();
   }
 
-  allbotsDead() {
+  allBotsDead() {
     if (this.currentStep > this.minSteps) {
       return true;
     }
@@ -33,19 +33,13 @@ class Population {
     return !out;
   }
 
-  calculateFitness() {
-    for (let i = 0; i<this.bots.length; i++) {
-      this.bots[i].calculateFitness();
-    }
-  }
-
   nextGen() {
     this.currentStep = 0;
     let newbots = [];
-    this.calculateFitness();
     this.setBestBot();
     this.calculateFitnessSum();
     newbots[0] = this.bots[this.bestBot].clone();
+    consoleLog(this.bestBot);
     newbots[0].isBest = true;
     for (let i = 1; i< this.bots.length; i++) {
       let parent = this.selectParent();
@@ -79,25 +73,21 @@ class Population {
 
   mutate() {
     for (let i = 1; i<this.bots.length; i++) {
-      this.bots[i].brain.mutate();
+      console.log(this.bots[i]);
+      this.bots[i].mutate();
     }
   }
 
   setBestBot() {
     let max = 0;
     let maxIndex = 0;
-    for (let i = 0; i<this.bots.length; i++) {
+    for (let i = 1; i<this.bots.length; i++) {
       if (this.bots[i].fitness > max) {
         max = this.bots[i].fitness;
         maxIndex = i;
       }
     }
     this.bestBot = maxIndex;
-    if (this.bots[this.bestBot].reachedGoal) {
-      this.minSteps = this.bots[this.bestBot].brain.index;
-      console.log("Gen "+this.gen+"'s Best Score: "+max+", Steps: "+this.bots[maxIndex].brain.index);
-    } else {
-      console.log("Gen "+this.gen+"'s Best Score: "+max+", Distance from Goal: "+round(dist(this.bots[maxIndex].pos.x, this.bots[maxIndex].pos.y, goal.x, goal.y)));
-    }
+    //consoleLog("Gen "+this.gen+"'s Best Score: "+max);
   }
 }
