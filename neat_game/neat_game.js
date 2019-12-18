@@ -18,10 +18,10 @@ function draw() {
 function mouseReleased() {
   if (!this.on) {
     this.on = true;
-    this.game = new GameRunner(150);
-    this.game.load();
+    this.game = new GameRunner(1);
   } else {
-    this.game.pop.bots[0].jump();
+    document.getElementById("console").innerHTML = `tried to jump at ${this.game.chunks[this.game.chunks.length-14]}`;
+    this.game.pop.bots[0].jump(this.game.chunks[this.game.chunks.length-14]);
   }
 }
 

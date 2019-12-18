@@ -4,17 +4,15 @@ class Population {
     this.fitnessSum = 0;
     this.gen = 1;
     this.minSteps = 1000;
-    this.currentStep = 0;
     for (let i = 0; i<size; i++) {
       this.bots[i] = new Bot();
     }
   }
 
-  update(cHeight, nHeight) {
+  update(cHeight, nDist, nHeight) {
     for (let i = 0; i<this.bots.length; i++) {
-      this.bots[i].update(cHeight, nHeight);
+      this.bots[i].update(cHeight, nDist, nHeight);
     }
-    this.currentStep++;
   }
 
   show() {

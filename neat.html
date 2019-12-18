@@ -51,9 +51,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <h2>Evaluating Fitness</h2>
-                        <p> In order for the algorithm to work, the algorithm must know which of the creatures did the best.<br><br>For different programs, the scoring method varies.<br><br>In this example, the dots are graded with the following function: </p>
-                        <pre><code>calculateFitness() {<br>  if (this.reachedGoal) {<br>    this.fitness = <br>    (1/16 + 100000/pow(this.brain.index, 2));<br>  } else {<br>    let distanceToGoal = dist(this.pos,goal);<br>    this.fitness = 1/pow(distanceToGoal, 2);<br>  }<br>}</code></pre>
+                        <h2>Sensing Surroundings</h2>
+                        <p> In order for the algorithm to work, it must be able to know what is going on around it.<br><br>It then gives this information to the brain.<br><br>In this simulation, the network takes an input of a list, and then sends the values to their respective Nodes.</p>
+                        <pre><code>this.brain.clear();<br>let data = [this.hgt,cHeight,nDist,nHeight,1]<br>this.brain.update(data);<br>if (this.brain.outputs[0].sum > 0) {<br>  this.jump();<br>}</code></pre>
                     </div>
                     <div class="col-md-4">
                         <h2>Selecting Parents</h2>
