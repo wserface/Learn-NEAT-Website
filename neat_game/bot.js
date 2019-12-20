@@ -12,11 +12,11 @@ class Bot {
     if (this.alive) {
       this.fitness = (score)/250;
       if (this.hgt < height-120-(25*cHeight)) {
-        this.vel += 0.25;
+        this.vel += 0.3;
         this.hgt += this.vel;
       }
       if (this.hgt > height-120-(25*cHeight)) {
-        if ((this.hgt-(height-120-(25*cHeight))) < 4) {
+        if ((this.hgt-(height-120-(25*cHeight))) < 6) {
           this.vel = 0;
           this.hgt = height-120-(25*cHeight);
         } else {

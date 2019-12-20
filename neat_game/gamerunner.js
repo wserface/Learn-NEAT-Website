@@ -5,7 +5,13 @@ class GameRunner {
     this.chunks = [];
     this.chunks[0] = 2;
     for (let i = 1; i<10; i++) {
-      this.chunks.push(this.chunks[this.chunks.length-1]+(round(random(4)-2)));
+      let add = this.chunks[this.chunks.length-1]+(round(random(4)-2));
+      if (add > 7) {
+        add = 7;
+      } else if (add < 0) {
+        add = 0;
+      }
+      this.chunks.push(add);
     }
   }
 
