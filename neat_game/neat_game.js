@@ -19,6 +19,7 @@ function mouseReleased() {
   if (!this.on) {
     this.on = true;
     this.game = new GameRunner(150);
+    this.gen = 1;
   } else {
     this.game.pop.bots[0].jump(this.game.chunks[this.game.chunks.length-14]);
   }
@@ -30,4 +31,11 @@ function sigmoid(n) {
 
 function consoleLog(msg) {
   document.getElementById("console").innerHTML = msg;
+}
+
+function newMap() {
+  let newGame = new GameRunner(0);
+  newGame.pop = this.game.pop.nextGen();
+  this.game = newGame;
+  this.gen++;
 }

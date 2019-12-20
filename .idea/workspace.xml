@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="50212900-b48a-492b-8cb5-9978a7807666" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neat_game/bot.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/bot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neat_game/brain.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/brain.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neat_game/gamerunner.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/gamerunner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neat_game/neat_game.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/neat_game.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/neat_game/population.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/population.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -96,8 +99,17 @@
       <workItem from="1576513898239" duration="97000" />
       <workItem from="1576605497389" duration="1729000" />
       <workItem from="1576694817211" duration="4077000" />
-      <workItem from="1576701579044" duration="242000" />
+      <workItem from="1576701579044" duration="1319000" />
+      <workItem from="1576882323905" duration="368000" />
     </task>
+    <task id="LOCAL-00001" summary="fixed error">
+      <created>1576701879884</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1576701879884</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +128,15 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="fixed error" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed error" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="324" y="6" key="CommitChangelistDialog2" timestamp="1576701876109">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="324" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576701876109" />
     <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1576513954093">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -125,10 +145,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="578" y="329" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576701718332" />
-    <state x="463" y="149" width="609" height="526" key="find.popup" timestamp="1576696777336">
+    <state x="463" y="149" width="740" height="596" key="find.popup" timestamp="1576882655723">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="463" y="149" width="609" height="526" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1576696777336" />
+    <state x="463" y="149" width="740" height="596" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1576882655723" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1576701851526">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -53,8 +53,14 @@ class Network {
 
   mutate() {
     for (let i = 0; i<this.inputs.length; i++) {
+      for (let w = 0; w<this.inputs[i].weights; w++) {
+        this.inputs[i].weights[w] = (random(1)<0.05) ? (random(2)-1) : this.inputs[i].weights[w];
+      }
     }
     for (let i = 0; i<this.calcs.length; i++) {
+      for (let w = 0; w<this.calcs[i].weights; w++) {
+        this.inputs[i].weights[w] = (random(1)<0.05) ? (random(2)-1) : this.inputs[i].weights[w];
+      }
     }
   }
 

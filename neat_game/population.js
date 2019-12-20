@@ -23,9 +23,6 @@ class Population {
   }
 
   allBotsDead() {
-    if (this.currentStep > this.minSteps) {
-      return true;
-    }
     let out = false;
     for (let i = 0; i<this.bots.length; i++) {
       out = out || this.bots[i].alive;
@@ -34,21 +31,20 @@ class Population {
   }
 
   nextGen() {
-    this.currentStep = 0;
-    let newbots = [];
+    let newBots = [];
     this.setBestBot();
     this.calculateFitnessSum();
-    newbots[0] = this.bots[this.bestBot].clone();
-    newbots[0].isBest = true;
+    newBots[0] = this.bots[this.bestBot].clone();
+    newBots[0].isBest = true;
     for (let i = 1; i< this.bots.length; i++) {
-      let parent = this.selectParent();
-      newbots[i] = parent.clone();
+      newBots[i] = this.selectParent().clone();
     }
+    let out = new Population(this.bots.length);
     for (let i = 0; i<this.bots.length; i++) {
-      this.bots[i] = newbots[i];
+      out.bots[i] = newBots[i];
     }
-    this.mutate();
-    this.gen++;
+    out.mutate();
+    return out;
   }
 
   calculateFitnessSum() {
@@ -72,7 +68,6 @@ class Population {
 
   mutate() {
     for (let i = 1; i<this.bots.length; i++) {
-      console.log(this.bots[i]);
       this.bots[i].mutate();
     }
   }
@@ -87,6 +82,6 @@ class Population {
       }
     }
     this.bestBot = maxIndex;
-    //consoleLog("Gen "+this.gen+"'s Best Score: "+max);
+    consoleLog("Gen "+gen+"'s Best Score: "+max);
   }
 }

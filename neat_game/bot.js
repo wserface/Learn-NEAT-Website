@@ -10,7 +10,7 @@ class Bot {
 
   update(cHeight, nDist, nHeight, score) {
     if (this.alive) {
-      this.fitness = score;
+      this.fitness = (score)/250;
       if (this.hgt < height-120-(25*cHeight)) {
         this.vel += 0.25;
         this.hgt += this.vel;
