@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50212900-b48a-492b-8cb5-9978a7807666" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/neat_game/gamerunner.js" beforeDir="false" afterPath="$PROJECT_DIR$/neat_game/gamerunner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/neat.html" beforeDir="false" afterPath="$PROJECT_DIR$/neat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nn_demo/node.js" beforeDir="false" afterPath="$PROJECT_DIR$/nn_demo/node.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +98,7 @@
       <workItem from="1576694817211" duration="4077000" />
       <workItem from="1576701579044" duration="1319000" />
       <workItem from="1576882323905" duration="1107000" />
-      <workItem from="1576887049803" duration="1381000" />
+      <workItem from="1576887049803" duration="3023000" />
     </task>
     <task id="LOCAL-00001" summary="fixed error">
       <created>1576701879884</created>

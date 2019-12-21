@@ -50,9 +50,14 @@ class Node {
 
     //Shows value of node
     if (t) {
-      stroke(0);
+      if (this.sum < 0) {
+        fill(0);
+        stroke(0);
+      } else {
+        fill(255);
+        stroke(255);
+      }
       strokeWeight(1);
-      fill(0);
       text(""+round(this.sum*1000)/1000, this.pos.x-15, this.pos.y+5);
     }
   }
