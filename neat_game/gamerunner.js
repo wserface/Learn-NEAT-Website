@@ -29,7 +29,7 @@ class GameRunner {
         }
         this.chunks.push(add);
       }
-      this.pop.update(this.chunks[this.chunks.length-13], 250-this.step%250, this.chunks[this.chunks.length-12], this.step);
+      this.pop.update(this.chunks[this.chunks.length-14], 250-this.step%250, this.chunks[this.chunks.length-13], this.step);
       this.step += 10;
     }
   }
