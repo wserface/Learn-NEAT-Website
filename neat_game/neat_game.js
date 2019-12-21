@@ -18,7 +18,7 @@ function draw() {
 function mouseReleased() {
   if (!this.on) {
     this.on = true;
-    this.game = new GameRunner(150);
+    this.game = new GameRunner(450);
     this.gen = 1;
   } else {
     this.game.pop.bots[0].jump(this.game.chunks[this.game.chunks.length-14]);

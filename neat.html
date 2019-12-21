@@ -56,16 +56,14 @@
                         <pre><code>this.brain.clear();<br>let data = [this.hgt,cHeight,nDist,nHeight,1]<br>this.brain.update(data);<br>if (this.brain.outputs[0].sum > 0) {<br>  this.jump();<br>}</code></pre>
                     </div>
                     <div class="col-md-4">
-                        <h2>Selecting Parents</h2>
-                        <p> After evaluating each bot's fitness, the program then needs to choose which parent the new dot will represent.<br><br>Multiple bots can have one parent, and the chances are determined by the sum of all the bot's fitnesses, as seen below. </p>
-                        <pre><code>selectParent() {<br>  let rand = random(this.fitnessSum);<br>  let runningSum = 0;<br>  for (let i = 0; i&lt;this.dots.length; i++) {<br>    runningSum+= this.dots[i].fitness;<br>    if (runningSum > rand) {<br>      return this.dots[i];<br>      }<br>    }<br>  return null;<br>}</code></pre>
+                        <h2>Tweaking Brains</h2>
+                        <p></p>
+                        <pre><code></code></pre>
                     </div>
                     <div class="col-md-4">
-                        <h2>Random Evolution</h2>
-                        <p>After all the new bots have replaced the old bots, the algorithm must mutate the remaining bots.<br><br>It uses a for loop to call the function on each of the bots.<br><br>In this demonstration, if a random number is less than the current generation number to the -1st power, than one of the directions is changed to a random direction. Because of this, the dots mutate rapidly in the start, and mutate less as the simulation progresses.</p>
-                        <pre><code>mutate() {<br>  for (let i = 0; i&lt;this.dirs.length; i++) {<br>    if (random(1)<(1/pop.gen))) {<br>      this.dirs[i] = <br>      p5.Vector.fromAngle(random(TWO_PI));<br>    }<br>  }<br>}
-
-                        </code></pre>
+                        <h2>Tweaking Connections</h2>
+                        <p>Like in the Genetic Algorithm Demonstration, the bots need to mutate in order to learn. In this game, the bots mutate by having their connections altered slightly</p>
+                        <pre><code>mutate() {<br>  for (let i=0;i&lt;this.inputs.length;i++) {<br>   for(let w=0;w&lt;this.inputs[i].weights;w++){<br>      if (random(1)<0.05) {<br>        let temp = (random(2)-1);<br>        this.inputs[i].weights[w] = temp;<br>      }<br>    }<br>  }<br>  for (let i=0;i&lt;this.calcs.length;i++) {<br>   for(let w=0;w&lt;this.calcs[i].weights;w++){<br>      if (random(1)<0.05) {<br>        let temp = (random(2)-1);<br>        this.inputs[i].weights[w] = temp;<br>      }<br>    }<br>  }<br>}</code></pre>
                     </div>
                 </div>
                 <hr>

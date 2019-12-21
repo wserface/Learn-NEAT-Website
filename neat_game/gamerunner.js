@@ -8,7 +8,7 @@ class GameRunner {
       let add = this.chunks[this.chunks.length-1]+(round(random(4)-2));
       if (add > 7) {
         add = 7;
-      } else if (add < 0) {
+      } else if (add < 0-4) {
         add = 0;
       }
       this.chunks.push(add);
@@ -21,9 +21,15 @@ class GameRunner {
       newMap();
     } else {
       if (this.step%250 === 0) {
-        this.chunks.push(this.chunks[this.chunks.length-1]+(round(random(4)-2)));
+        let add = this.chunks[this.chunks.length-1]+(round(random(4)-2));
+        if (add > 7) {
+          add = 7;
+        } else if (add < 0-4) {
+          add = 0;
+        }
+        this.chunks.push(add);
       }
-      this.pop.update(this.chunks[this.chunks.length-14], this.step%250, this.chunks[this.chunks.length-13], this.step);
+      this.pop.update(this.chunks[this.chunks.length-13], 250-this.step%250, this.chunks[this.chunks.length-12], this.step);
       this.step += 10;
     }
   }

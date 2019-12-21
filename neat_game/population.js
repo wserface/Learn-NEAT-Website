@@ -82,6 +82,6 @@ class Population {
       }
     }
     this.bestBot = maxIndex;
-    consoleLog("Gen "+gen+"'s Best Score: "+max);
+    consoleLog("Gen "+gen+"'s Best Score: "+max+".");
   }
 }
